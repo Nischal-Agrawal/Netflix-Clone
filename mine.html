@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix India- Watch Tv Shows</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            box-sizing: border-box;
+            font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
+        }
+
+        :any-link {
+            text-decoration: none;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        body>.container>header>nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            font-family: "Segoe UI";
+            margin-top: 20px;
+            filter: brightness(200%);
+            filter: drop-shadow(2px 4px 6px black);
+
+        }
+
+        body>.container>header>nav>.right>ul {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            /* fle */
+            /* justify-content: ; */
+        }
+
+        body>.container>header>nav>.logo svg {
+
+
+            fill: rgb(229, 9, 20);
+            /* background-color: aqua; */
+            width: 140px;
+            height: fit-content;
+            margin-left: 10%;
+            /* filter: ; */
+            margin-top: 10px;
+            filter: brightness(100%);
+            filter: drop-shadow(2px 2px black);
+        }
+
+        body>.container>header>nav>.right>ul>li>button {
+            background-color: rgb(229, 9, 20);
+            border-color: rgba(0, 0, 0, 0);
+            color: rgb(255, 255, 255);
+            font-weight: 500;
+            font-size: 13px;
+            text-align: center;
+            border-radius: 6px;
+            padding: 4px 9px;
+        }
+
+        body>.container>header>nav>.right>ul>li>select {
+            padding: 4px 9px;
+            opacity: 1;
+            /* border-color: black; */
+            /* background: transparent; */
+            background-color: rgb(43, 42, 42);
+            opacity: 0.5;
+            color: white;
+            /* border: 0 solid transparent;  */
+            border-color: light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+
+
+        }
+
+        body>.container {
+            background-image: url(images/bg.jpg);
+            position: absolute;
+            height: 100vh;
+            width: 100vw;
+            /* background: ; */
+            /* filter: brightness(80%); */
+            /* filter: brightness(44%); */
+            /* filter: drop-shadow(2px 2px black); */
+            background-position: center center;
+            overflow: auto;
+
+
+        }
+
+        .membership {
+            /* border: 3px solid black; */
+            /* height: 50em; */
+            /* width: 70rem; */
+            margin: auto;
+            /* margin-top: minmax(0px,100px) ; */
+            /* margin-top: 50vh; */
+            /* display: flex;
+            flex-direction: column;
+            bottom: 20px; */
+
+        }
+
+        body>.container>.membership {
+            color: white;
+            text-align: center;
+            line-height: 3.9rem;
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-top: 30vh;
+            filter: drop-shadow(2px 2px black);
+
+
+
+        }
+
+        body>.container>.membership>h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            /* margin-top: 100px; */
+
+        }
+
+        #email,
+        #emailbutton {
+            width: minmax(141.5px, 25%);
+            height: 55px;
+            padding: 10px;
+            font-size: 1.1rem;
+            text-align: center;
+            color: white;
+            /* text-align: justify; */
+
+        }
+
+        #email {
+            text-align: left;
+            /* background-color: transparent;
+            background-color: darkgrey;
+            opacity: 0.5; */
+            background-color: rgb(43, 42, 42);
+            opacity: 0.5;
+            color: white;
+
+        }
+
+        #emailbutton {
+            min-width: 13%;
+            background-color: rgb(229, 9, 20);
+            text-align: center;
+
+
+
+
+        }
+
+        /* body>.container>.membership > .recorder >  */
+        .sections {
+            margin-top: 100vh;
+            /* height: 80vh; */
+            background-color: black;
+            width: 100vw;
+        }
+
+        .sections>.sect1,
+        .sect2,
+        .sect3,
+        .sect4 {
+            height: 80vh;
+            width: 70vw;
+            /* background-color: yellow; */
+            margin: auto;
+            display: grid;
+            /* grid-template-columns: minmax(1,2) repeat(2,1fr); */
+            /* display: flex; */
+            grid-template-columns: repeat(2, 1fr);
+            color: white;
+
+
+        }
+
+        /* @media screen  {
+            
+        } */
+        @media screen and (max-width: 1466px) {
+
+            .sections>.sect1,
+            .sect2,
+            .sect3,
+            .sect4 {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-rows: repeat(2,1fr);
+                height: 140vh;
+                width: auto;
+
+            }
+
+        }
+
+        .sections>.sect1,
+        .sect2,
+        .sect3,
+        .sect4,
+        .sect5>.boxx {
+            /* width: 50%; */
+            text-align: center;
+            align-items: center;
+            color: white;
+            display: grid;
+        }
+
+        .sections>.sect1>.box1b {
+            min-width: 27%;
+            display: grid;
+        }
+
+        .sections>.sect1>.box1b img {
+            position: absolute;
+            width: 27%;
+            align-self: center;
+            margin: auto;
+
+        }
+
+        .sections>.sect1>.box1b video {
+            width: 65%;
+            margin-left: 53px;
+
+
+        }
+
+        .sections>.sect2>.box2a>.outer {
+            width: 300px;
+            /* border: 1px solid white; */
+            display: flex;
+            height: 79px;
+            padding: 6px;
+            gap: 10px;
+            background-color: black;
+            border-radius: 10px;
+        }
+
+        .sections>.sect2>.box2a>.outer>.txt {
+            display: flex;
+            flex-direction: column;
+            font-size: 15px;
+        }
+
+        .sections>.sect2>.box2a {
+            display: grid;
+        }
+
+        .sections>.sect2>.box2a img {
+            width: 85%;
+        }
+
+        .sections>.sect2>.box2a>.outer {
+            position: absolute;
+            /* align-self: flex-end; */
+            /* bottom: 0..1%; */
+            margin-top: 16%;
+            margin-left: 4.6%;
+        }
+
+        /* .sections > .sect3 > .box3b {
+            display: flex;
+            
+        } */
+        .sections>.sect3>.box3b {
+            min-width: 27%;
+            display: grid;
+        }
+
+        /* .sections > .sect3 > .box3b img{
+            position: absolute;
+            width: 27%;
+            align-self: center;
+            margin: auto;} */
+        .sections>.sect3>.box3b img {
+            position: absolute;
+            width: 37%;
+            align-self: center;
+            margin: auto;
+            margin-top: 18px;
+            margin-left: 23px;
+        }
+
+        /* .sections > .sect3 > .box3b video{
+            width: 65%;
+            margin-left: 53px;
+            
+
+        } */
+        .sections>.sect3>.box3b video {
+            width: 65%;
+            margin-left: 123px;
+            margin-bottom: 108px;
+            height: 61%;
+        }
+        .sections > .sect4 > .box4a {
+            width: 27%;
+        }
+
+        .sections>.sect5 {
+            /* text-align: center; */
+            /* height: 80vh; */
+            width: 70vw;
+            margin: auto;
+            color: white;
+            margin-top: 40px;
+        }
+
+        .sections>.sect5>h1 , .h , .recorder{
+            text-align: center;
+        }
+
+        .sections>.sect5>.questions {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin: 20px;
+
+        }
+
+        .sections>.sect5>.questions>li {
+            background-color: rgb(48, 46, 46);
+            height: 70px;
+            display: grid;
+            grid-template-columns: 9fr 1fr;
+
+        }
+
+        .sections>.sect5>.questions>li>.q {
+            font-size: 20px;
+            padding: 20px;
+
+        }
+
+        .sections>.sect5>.questions>li>.icon img {
+            height: 30px;
+            width: 30px;
+            fill: white;
+            color: white;
+            float: right;
+            /* padding: 10px 0px; */
+            margin-right: 20px;
+            margin-top: 17px;
+            /* display: flex;
+            align-self: center;
+            justify-self: center; */
+
+        }
+        .sections>.sect5> .h , .recorder{
+            padding: 15px;
+        }
+        .sections > .logcontainer {
+            
+            height: 70vh;
+            margin-top: 100px;
+            /* background-color: black; */
+            display: flex;
+            justify-content: center;
+            align-items: center;}
+        .sections > .logcontainer > .log {
+
+            /* border: 1px solid white; */
+            /* height: 90vh; */
+            width: 65vw;
+            height: 70vh;
+            /* background-color: #fff; */
+            /* display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: 1fr 6fr ; */
+            /* text-align: center; */
+            display: flex;
+            gap: 120px;color: white;
+        } 
+        .sections > .logcontainer > .log > .contentlist > ul{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            text-decoration: underline;
+        } 
+        #language{
+            padding: 4px 9px;
+            opacity: 1;
+            /* border-color: black; */
+            /* background: transparent; */
+            background-color: rgb(43, 42, 42);
+            opacity: 0.5;
+            color: white;
+            /* border: 0 solid transparent;  */
+            border-color: light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+            
+        }      
+
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <div class="logo">
+                    <svg viewBox="0 0 111 30" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+                        class="default-ltr-cache-1d568uk ev1dnif2">
+                        <g>
+                            <path
+                                d="M105.06233,14.2806261 L110.999156,30 C109.249227,29.7497422 107.500234,29.4366857 105.718437,29.1554972 L102.374168,20.4686475 L98.9371075,28.4375293 C97.2499766,28.1563408 95.5928391,28.061674 93.9057081,27.8432843 L99.9372012,14.0931671 L94.4680851,-5.68434189e-14 L99.5313525,-5.68434189e-14 L102.593495,7.87421502 L105.874965,-5.68434189e-14 L110.999156,-5.68434189e-14 L105.06233,14.2806261 Z M90.4686475,-5.68434189e-14 L85.8749649,-5.68434189e-14 L85.8749649,27.2499766 C87.3746368,27.3437061 88.9371075,27.4055675 90.4686475,27.5930265 L90.4686475,-5.68434189e-14 Z M81.9055207,26.93692 C77.7186241,26.6557316 73.5307901,26.4064111 69.250164,26.3117443 L69.250164,-5.68434189e-14 L73.9366389,-5.68434189e-14 L73.9366389,21.8745899 C76.6248008,21.9373887 79.3120255,22.1557784 81.9055207,22.2804387 L81.9055207,26.93692 Z M64.2496954,10.6561065 L64.2496954,15.3435186 L57.8442216,15.3435186 L57.8442216,25.9996251 L53.2186709,25.9996251 L53.2186709,-5.68434189e-14 L66.3436123,-5.68434189e-14 L66.3436123,4.68741213 L57.8442216,4.68741213 L57.8442216,10.6561065 L64.2496954,10.6561065 Z M45.3435186,4.68741213 L45.3435186,26.2498828 C43.7810479,26.2498828 42.1876465,26.2498828 40.6561065,26.3117443 L40.6561065,4.68741213 L35.8121661,4.68741213 L35.8121661,-5.68434189e-14 L50.2183897,-5.68434189e-14 L50.2183897,4.68741213 L45.3435186,4.68741213 Z M30.749836,15.5928391 C28.687787,15.5928391 26.2498828,15.5928391 24.4999531,15.6875059 L24.4999531,22.6562939 C27.2499766,22.4678976 30,22.2495079 32.7809542,22.1557784 L32.7809542,26.6557316 L19.812541,27.6876933 L19.812541,-5.68434189e-14 L32.7809542,-5.68434189e-14 L32.7809542,4.68741213 L24.4999531,4.68741213 L24.4999531,10.9991564 C26.3126816,10.9991564 29.0936358,10.9054269 30.749836,10.9054269 L30.749836,15.5928391 Z M4.78114163,12.9684132 L4.78114163,29.3429562 C3.09401069,29.5313525 1.59340144,29.7497422 0,30 L0,-5.68434189e-14 L4.4690224,-5.68434189e-14 L10.562377,17.0315868 L10.562377,-5.68434189e-14 L15.2497891,-5.68434189e-14 L15.2497891,28.061674 C13.5935889,28.3437998 11.906458,28.4375293 10.1246602,28.6868498 L4.78114163,12.9684132 Z">
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+                <div class="right">
+                    <ul>
+
+
+                        <li>
+
+                            <select lang="lang" id="language">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="16" height="16"
+                                    viewBox="0 0 16 16" role="img" data-icon="LanguagesSmall" aria-hidden="true">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M10.7668 5.33333L10.5038 5.99715L9.33974 8.9355L8.76866 10.377L7.33333 14H9.10751L9.83505 12.0326H13.4217L14.162 14H16L12.5665 5.33333H10.8278H10.7668ZM10.6186 9.93479L10.3839 10.5632H11.1036H12.8856L11.6348 7.2136L10.6186 9.93479ZM9.52722 4.84224C9.55393 4.77481 9.58574 4.71045 9.62211 4.64954H6.41909V2H4.926V4.64954H0.540802V5.99715H4.31466C3.35062 7.79015 1.75173 9.51463 0 10.4283C0.329184 10.7138 0.811203 11.2391 1.04633 11.5931C2.55118 10.6795 3.90318 9.22912 4.926 7.57316V12.6667H6.41909V7.51606C6.81951 8.15256 7.26748 8.76169 7.7521 9.32292L8.31996 7.88955C7.80191 7.29052 7.34631 6.64699 6.9834 5.99715H9.06968L9.52722 4.84224Z"
+                                        fill="currentColor"></path>
+                                </svg>
+                                <!-- <option value="English">English</option> -->
+                                <option lang="en" label="English" value="en-IN" selected=""> English</option>
+                                <!-- <option value="Hindi">Hindi</option> -->
+                                <option lang="hi" label="हिन्दी" value="hi-IN"> हिन्दी</option>
+                            </select>
+
+                        </li>
+                        <li>
+                            <button class="signin">
+                                Sign In
+
+                            </button>
+                        </li>
+                    </ul>
+
+                </div>
+            </nav>
+        </header>
+        <div class="membership">
+            <h1>Unlimited movies, TV shows and more</h1>
+            <div>Watch anywhere. Cancel anytime.</div>
+            <div>Ready to watch? Enter your email or mobile number to create or restart your membership.</div>
+            <div class="recorder">
+                <span>
+                    <input type="email" name="email" id="email" placeholder="Email or phone number.">
+                </span>
+                <button id="emailbutton">
+                    Get started
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="24" height="24" viewBox="0 0 24 24"
+                        role="img" data-icon="ChevronRightStandard" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M15.5859 12L8.29303 19.2928L9.70725 20.7071L17.7072 12.7071C17.8948 12.5195 18.0001 12.2652 18.0001 12C18.0001 11.7347 17.8948 11.4804 17.7072 11.2928L9.70724 3.29285L8.29303 4.70706L15.5859 12Z"
+                            fill="currentColor"></path>
+                    </svg>
+                </button>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="sections">
+        <hr style="height: 10px; background-color: rgb(45, 45, 40); width: 100vw; border-color: transparent;">
+        <div class="sect1">
+            <div class="box1a boxx">
+                <h1>Enjoy on your TV</h1>
+                <h3>Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</h3>
+            </div>
+            <div class="box1b boxx">
+                <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png" width="80%"
+                    alt="">
+                <video
+                    src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-in-0819.m4v"
+                    autoplay muted loop></video>
+            </div>
+        </div>
+        <hr style="height: 10px; background-color: rgb(45, 45, 40); width: 100vw; border-color: transparent;">
+
+        <div class="sect2">
+            <div class="box2a boxx">
+                <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.jpg"
+                    alt="">
+                <div class="outer">
+
+                    <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/boxshot.png"
+                        alt="">
+                    <div>&nbsp;</div>
+
+                    <div class="txt">
+
+                        <div>Stranger Things</div>
+                        <!-- <div>&nbsp;</div> -->
+                        <div style="color: #0071eb;">Downloading...</div>
+                    </div>
+                    <!-- <div>&nbsp;</div> -->
+                    <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/download-icon.gif"
+                        alt="">
+                </div>
+            </div>
+            <div class="box2b boxx">
+                <h1>Download your shows to watch offline</h1>
+                <h3>Save your favourites easily and always have something to watch.</h3>
+            </div>
+        </div>
+        <hr style="height: 10px; background-color: rgb(45, 45, 40); width: 100vw; border-color: transparent;">
+
+        <div class="sect3">
+            <div class="box3a boxx">
+                <h1>Watch everywhere</h1>
+                <h3>Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</h3>
+            </div>
+            <div class="box3b boxx">
+                <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile-in.png"
+                    alt="">
+                <video
+                    src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices-in.m4v"
+                    autoplay muted loop></video>
+            </div>
+        </div>
+        <hr style="height: 10px; background-color: rgb(45, 45, 40); width: 100vw; border-color: transparent;">
+
+        <div class="sect4">
+            <div class="box4a boxx">
+                <img src="https://occ-0-4875-2186.1.nflxso.net/dnm/api/v6/19OhWN2dO19C9txTON9tvTFtefw/AAAABVr8nYuAg0xDpXDv0VI9HUoH7r2aGp4TKRCsKNQrMwxzTtr-NlwOHeS8bCI2oeZddmu3nMYr3j9MjYhHyjBASb1FaOGYZNYvPBCL.png?r=54d"
+                    alt="">
+            </div>
+            <div class="box4b boxx">
+                <h1>Create profiles for kids</h1>
+                <h3>Send children on adventures with their favourite characters in a space made just for them—free with
+                    your membership.</h3>
+            </div>
+        </div>
+        <hr style="height: 10px; background-color: rgb(45, 45, 40); width: 100vw; border-color: transparent;">
+
+        <div class="sect5">
+
+            <h1 style="font-size: 50px;">Frequently asked Ouestions</h1>
+            <div class="questions">
+                <li>
+                    <div class="q">what is Netflix ?</div>
+                    <div class="icon">
+                        <img src="https://cdn-icons-png.flaticon.com/512/32/32339.png" alt="">
+                    </div>
+                </li>
+                <li>
+                    <div class="q">How much does Netflix cost ?</div>
+                    <div class="icon">
+                        <img src="https://cdn-icons-png.flaticon.com/512/32/32339.png" alt="">
+                    </div>
+                </li>
+                <li>
+                    <div class="q">How can I watch ?</div>
+                    <div class="icon">
+                        <img src="https://cdn-icons-png.flaticon.com/512/32/32339.png" alt="">
+                    </div>
+                </li>
+                <li>
+                    <div class="q">How do I cancel ?</div>
+                    <div class="icon">
+                        <img src="https://cdn-icons-png.flaticon.com/512/32/32339.png" alt="">
+                    </div>
+                </li>
+                <li>
+                    <div class="q">What can I watch on Netflix ?</div>
+                    <div class="icon">
+                        <img src="https://cdn-icons-png.flaticon.com/512/32/32339.png" alt="">
+                    </div>
+                </li>
+                <li>
+                    <div class="q">Is Netflix good for kids ?</div>
+                    <div class="icon">
+                        <img src="https://cdn-icons-png.flaticon.com/512/32/32339.png" alt="">
+                    </div>
+                </li>
+            </div>
+            <div class="h">Ready to watch? Enter your email or mobile number to create or restart your membership.</div>
+            <div class="recorder">
+                <span>
+                    <input type="email" name="email" id="email" placeholder="Email or phone number.">
+                </span>
+                <button id="emailbutton">
+                    Get started
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="24" height="24" viewBox="0 0 24 24"
+                        role="img" data-icon="ChevronRightStandard" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M15.5859 12L8.29303 19.2928L9.70725 20.7071L17.7072 12.7071C17.8948 12.5195 18.0001 12.2652 18.0001 12C18.0001 11.7347 17.8948 11.4804 17.7072 11.2928L9.70724 3.29285L8.29303 4.70706L15.5859 12Z"
+                            fill="currentColor"></path>
+                    </svg>
+                </button>
+
+            </div>
+
+
+
+        </div>
+        <hr style="height: 10px; background-color: rgb(45, 45, 40); width: 100vw; border-color: transparent;">
+        <div class="logcontainer">
+            <div class="log">
+                
+                <div class="content1 contentlist">
+                    <ul>
+                        <li>Questions? Call 000-800-919-1694</li>
+                        <li>FAQ</li>
+                        <li>Investor Relations</li>
+                        <li>Privacy</li>
+                        <li>Speed Test</li>
+                        <li>
+                            <select lang="lang" id="language">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="16" height="16"
+                                    viewBox="0 0 16 16" role="img" data-icon="LanguagesSmall" aria-hidden="true">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M10.7668 5.33333L10.5038 5.99715L9.33974 8.9355L8.76866 10.377L7.33333 14H9.10751L9.83505 12.0326H13.4217L14.162 14H16L12.5665 5.33333H10.8278H10.7668ZM10.6186 9.93479L10.3839 10.5632H11.1036H12.8856L11.6348 7.2136L10.6186 9.93479ZM9.52722 4.84224C9.55393 4.77481 9.58574 4.71045 9.62211 4.64954H6.41909V2H4.926V4.64954H0.540802V5.99715H4.31466C3.35062 7.79015 1.75173 9.51463 0 10.4283C0.329184 10.7138 0.811203 11.2391 1.04633 11.5931C2.55118 10.6795 3.90318 9.22912 4.926 7.57316V12.6667H6.41909V7.51606C6.81951 8.15256 7.26748 8.76169 7.7521 9.32292L8.31996 7.88955C7.80191 7.29052 7.34631 6.64699 6.9834 5.99715H9.06968L9.52722 4.84224Z"
+                                        fill="currentColor"></path>
+                                </svg>
+                                <!-- <option value="English">English</option> -->
+                                <option lang="en" label="English" value="en-IN" selected=""> English</option>
+                                <!-- <option value="Hindi">Hindi</option> -->
+                                <option lang="hi" label="हिन्दी" value="hi-IN"> हिन्दी</option>
+                            </select>
+                        </li>
+                        <li>Netflix India</li>
+                        
+                    </ul>
+                </div>
+                <div class="content2 contentlist">
+                    <ul>
+                        <li>Help Centre</li>
+                        <li>Jobs</li>
+                        <li>Cookie Preferences</li>
+                        <li>Legal Notices</li>
+                        
+                    </ul>
+                </div>
+                <div class="content3 contentlist">
+                    <ul>
+                       <li>Account</li>
+                       <li>Ways to Watch</li>
+                       <li>Corporate Information</li>
+                       <li>Only on Netflix</li>
+                       
+                    </ul>
+                </div>
+                <div class="content4 contentlist">
+                    <ul>
+                        <li>Media Centre</li>
+                        <li>Terms of Use</li>
+                        <li>Contact Us</li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+</body>
+
+</html>
